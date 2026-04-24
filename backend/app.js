@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const placesRoutes = require('./routes/places-routes');
 const usersRoutes = require('./routes/users-routes');
@@ -27,7 +28,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect('mongodb+srv://geraldcraig_db_user:ub4zn8i3AVAZkBmF@cluster0.z6lnfir.mongodb.net/mern?appName=Cluster0')
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     app.listen(4000);
   })
