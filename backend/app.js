@@ -57,13 +57,3 @@ mongoose
     console.log(err);
   });
 
-// mongoose
-//     .connect(
-//         `mongodb+srv://geraldcraig_db_user:ub4zn8i3AVAZkBmF@cluster0.z6lnfir.mongodb.net/mern?appName=Cluster0`
-//     )
-//     .then(() => {
-//       app.listen(4000);
-//     })
-//     .catch(err => {
-//       console.log(err);
-//     });
